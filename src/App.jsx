@@ -59,7 +59,7 @@ export function App() {
           </li>
           <li className="hover:brightness-200">
             <a
-              href="https://www.facebook.com/christianlifecenterchipman/live_videos"
+              href="https://www.facebook.com/christianlifecenterchipman/videos"
               target="_blank"
             >
               Watch
@@ -81,7 +81,7 @@ export function App() {
           className="w-fit p-2 m-4 text-lg border-2 rounded-md text-white bg-lime-950/50 hover:bg-lime-950 transition-all duration-400 ease-in-out"
         >
           <a
-            href="https://www.facebook.com/christianlifecenterchipman/live_videos"
+            href="https://www.facebook.com/christianlifecenterchipman/videos"
             target="_blank"
           >
             WATCH LIVE STREAM
