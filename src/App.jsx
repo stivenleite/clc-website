@@ -1,6 +1,6 @@
 import logo from "./assets/logo.svg";
 import kidsLogo from "./assets/kids-logo.svg";
-import { FaChurch, FaPhoneAlt } from "react-icons/fa";
+import { FaChurch, FaPhoneAlt, FaCheck } from "react-icons/fa";
 import { useState } from "react";
 
 export function App() {
@@ -90,21 +90,32 @@ export function App() {
       </section>
 
       {/* Join */}
-      <section className="flex flex-col items-center justify-center w-full h-52" id="join">
-        <h2 className="text-2xl text-lime-950">SERVICE TIME & ADRESS</h2>
-        <div className="my-6 text-lg">
-          <strong className="text-lime-800">Sunday Services</strong> @ 10:30am
+      <section className="w-full h-fit md:p-8 px-4 py-12 flex md:flex-row flex-col items-center justify-evenly gap-10">
+        <div className="flex flex-col items-center">
+          <h2 className="text-2xl text-lime-950">SERVICE TIME & ADRESS</h2>
+          <div className="my-6 text-lg">
+            <strong className="text-lime-800">Sunday Services</strong> @ 10:30am
+          </div>
+          <div className="flex items-center gap-1">
+            <FaChurch className="text-lime-700"/>
+            740 Main Street, Chipman NB -
+            <a className="text-lime-700 hover:underline" href="https://maps.app.goo.gl/u7i1FJbLsgK5W9Xt7" target="_blank">
+              View map
+            </a>
+          </div>
+          <div className="flex items-center gap-1">
+            <FaPhoneAlt className="text-lime-700" />
+            (506) 339-6113
+          </div>
         </div>
-        <div className="flex items-center gap-1">
-          <FaChurch className="text-lime-700"/>
-          740 Main Street, Chipman NB -
-          <a className="text-lime-700 hover:underline" href="https://maps.app.goo.gl/u7i1FJbLsgK5W9Xt7" target="_blank">
-            View map
-          </a>
-        </div>
-        <div className="flex items-center gap-1">
-          <FaPhoneAlt className="text-lime-700" />
-          (506) 339-6113
+        <div className="md:w-px md:h-40 w-2/3 h-px bg-lime-700" />
+        <div className="flex flex-col md:gap-2 gap-6 items-center md:items-start">
+          {/* <h2 className="text-2xl text-lime-950">COME JOIN US FOR</h2> */}
+          <div className="flex md:flex-row flex-col items-center gap-2"><FaCheck className="text-lime-700" /> Uplifting Worship Music</div>
+          <div className="flex md:flex-row flex-col items-center gap-2"><FaCheck className="text-lime-700" /> Practical Bible-Based</div>
+          <div className="flex md:flex-row flex-col items-center gap-2"><FaCheck className="text-lime-700" /> Nursery Care for Babies & Toddlers</div>
+          <div className="flex md:flex-row flex-col items-center gap-2"><FaCheck className="text-lime-700" /> CLC Kids Program</div>
+          <div className="flex md:flex-row flex-col items-center gap-2"><FaCheck className="text-lime-700" /> Youth Class (1st & 3rd Sunday)</div>
         </div>
       </section>
 
