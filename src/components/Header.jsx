@@ -24,6 +24,13 @@ export function Header() {
     });
   }
 
+  function scrollToCalendar() {
+    window.scrollTo({
+      top: 9999,
+      behavior: "smooth",
+    });
+  }
+
   function scrollToKids() {
     if (isDesktopScreen) {
       window.scrollTo({
@@ -103,6 +110,15 @@ export function Header() {
               onClick={scrollToJoin}
             >
               Join
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              className="hover:brightness-200"
+              onClick={scrollToCalendar}
+            >
+              Calendar
             </button>
           </li>
           <li>

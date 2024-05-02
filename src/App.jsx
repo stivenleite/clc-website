@@ -113,7 +113,12 @@ export function App() {
         </div>
       </section>
 
-      <footer className="w-full h-20 bg-lime-950/90"></footer>
+      <section className="flex justify-center items-center flex-col gap-5 pt-7 pb-5 bg-lime-950/70">
+        <h2 className="font-serif text-white text-6xl">What's happening</h2>
+        <iframe src="https://embed.styledcalendar.com/#2WF2PeHUbs3oKNGr7Dkv" title="Calendar" className="w-full max-w-6xl h-[46rem] border-none"></iframe>
+      </section>
+
+      <footer className="w-full h-20 bg-lime-950"></footer>
     </div>
   );
 }
