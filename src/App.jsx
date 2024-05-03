@@ -8,7 +8,7 @@ export function App() {
       <Header />
 
       {/* Welcome Home */}
-      <section className="w-full h-screen bg-[url('./assets/cover.jpg')] bg-cover bg-center flex flex-col justify-center items-center">
+      <section id="welcome" className="w-full h-screen bg-[url('./assets/cover.jpg')] bg-cover bg-center flex flex-col justify-center items-center">
         <h1 className="font-serif md:text-9xl text-6xl text-white">
           Welcome Home
         </h1>
@@ -29,7 +29,7 @@ export function App() {
       </section>
 
       {/* Join */}
-      <section className="w-full h-fit md:p-8 px-4 py-12 flex md:flex-row flex-col items-center justify-evenly gap-10">
+      <section id="join" className="w-full h-fit md:p-8 px-4 py-12 flex md:flex-row flex-col items-center justify-evenly gap-10">
         <div className="flex flex-col items-center">
           <h2 className="text-2xl text-lime-950">SERVICE TIME & ADRESS</h2>
           <div className="my-6 text-lg">
@@ -74,7 +74,7 @@ export function App() {
       </section>
 
       {/* CLC Kids */}
-      <section className="w-full h-[500px] bg-[url('./assets/kids-cover.jpg')] bg-cover bg-center bg-fixed flex items-center justify-center">
+      <section id="kids" className="w-full h-[500px] bg-[url('./assets/kids-cover.jpg')] bg-cover bg-center bg-fixed flex items-center justify-center">
         <div className="flex flex-1 flex-col items-center justify-center gap-6 p-4 text-white bg-black/50 backdrop-blur-sm">
           <a
             href="https://www.facebook.com/profile.php?id=100064468585085"
@@ -94,8 +94,8 @@ export function App() {
         </div>
       </section>
 
-      {/* Give */}
-      <section className="flex items-center text-center flex-col gap-6 py-12 px-6">
+      
+      <section id="give" className="flex items-center text-center flex-col gap-6 py-12 px-6">
         <div className="font-bold text-xl">We desire to be generous because He is Generous with us</div>
         <div className="flex md:flex-row flex-col gap-12 justify-center text-center">
           <div className="shadow-2xl bg-lime-950/90 hover:bg-lime-950 text-white rounded-lg w-52 h-56 px-4 flex flex-col justify-center gap-4">
@@ -113,12 +113,13 @@ export function App() {
         </div>
       </section>
 
-      <section className="flex justify-center items-center flex-col gap-5 pt-7 pb-5 bg-lime-950/70">
+      {/* Calendar */}
+      <section id="calendar" className="flex justify-center items-center flex-col gap-5 pt-7 pb-5 bg-lime-950/70">
         <h2 className="font-serif text-white text-6xl">What's happening</h2>
         <iframe src="https://embed.styledcalendar.com/#2WF2PeHUbs3oKNGr7Dkv" title="Calendar" className="w-full max-w-6xl h-[46rem] border-none"></iframe>
       </section>
 
-      <footer className="w-full h-20 bg-lime-950"></footer>
+      <footer className="w-full h-10 bg-lime-950/80 text-white text-sm flex items-center justify-center">© 2024 Christian Life Center</footer>
     </div>
   );
 }

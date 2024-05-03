@@ -17,46 +17,16 @@ export function Header() {
     setShowMenu(!showMenu);
   }
 
-  function scrollToJoin() {
+  function scrollToSection (id) {
+    const section = document.getElementById(id)
+    const offset = 79
+    const sectionPosition = section.offsetTop - offset
     window.scrollTo({
-      top: 433,
-      behavior: "smooth",
-    });
-  }
+      top: sectionPosition,
+      behavior: "smooth"
+    })
 
-  function scrollToCalendar() {
-    window.scrollTo({
-      top: 9999,
-      behavior: "smooth",
-    });
-  }
-
-  function scrollToKids() {
-    if (isDesktopScreen) {
-      window.scrollTo({
-        top: 808,
-        behavior: "smooth",
-      });
-    } else {
-      window.scrollTo({
-        top: 1100,
-        behavior: "smooth",
-      });
-    }
-  }
-
-  function scrollToGive() {
-    if (isDesktopScreen) {
-      window.scrollTo({
-        top: 1176,
-        behavior: "smooth",
-      });
-    } else {
-      window.scrollTo({
-        top: 1600,
-        behavior: "smooth",
-      });
-    }
+    toggleMenu()
   }
 
   function changeHeaderBg() {
@@ -80,12 +50,13 @@ export function Header() {
 
   return (
     <header
+      id="navbar"
       className={
         showMenu || headerWhiteBg ? headerClassesBgWhite : headerClasses
       }
     >
       <div className="w-full flex items-center justify-between">
-        <a href="#">
+        <a href="">
           <img
             src={logo}
             alt="CLC"
@@ -107,7 +78,7 @@ export function Header() {
             <button
               type="button"
               className="hover:brightness-200"
-              onClick={scrollToJoin}
+              onClick={() => scrollToSection("join")}
             >
               Join
             </button>
@@ -116,16 +87,7 @@ export function Header() {
             <button
               type="button"
               className="hover:brightness-200"
-              onClick={scrollToCalendar}
-            >
-              Calendar
-            </button>
-          </li>
-          <li>
-            <button
-              type="button"
-              className="hover:brightness-200"
-              onClick={scrollToKids}
+              onClick={() => scrollToSection("kids")}
             >
               Kids
             </button>
@@ -134,9 +96,18 @@ export function Header() {
             <button
               type="button"
               className="hover:brightness-200"
-              onClick={scrollToGive}
+              onClick={() => scrollToSection("give")}
             >
               Give
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              className="hover:brightness-200"
+              onClick={() => scrollToSection("calendar")}
+            >
+              Calendar
             </button>
           </li>
           <li>
