@@ -1,8 +1,17 @@
 import kidsLogo from "./assets/kids-logo.svg";
 import { FaChurch, FaPhoneAlt, FaCheck } from "react-icons/fa";
 import { Header } from "./components/Header";
+import { isMobile } from "react-device-detect";
+import { useEffect, useState } from "react";
 
 export function App() {
+  const [streamUrl, setStreamUrl] = useState("https://www.facebook.com/christianlifecenterchipman/live_videos")
+  
+  useEffect(() => {
+    if (isMobile) {
+      setStreamUrl("fb://page/1215015818590281")
+    }
+  })
   return (
     <div className="">
       <Header />
@@ -20,7 +29,7 @@ export function App() {
           className="w-fit p-2 m-4 text-lg border-2 rounded-md text-white bg-lime-950/50 hover:bg-lime-950 transition-all duration-400 ease-in-out"
         >
           <a
-            href="https://www.facebook.com/christianlifecenterchipman/live_videos"
+            href={streamUrl}
             target="_blank"
           >
             WATCH LIVE STREAM
