@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "../assets/logo.svg";
 import { FaX, FaBars } from "react-icons/fa6";
 import { isMobile, osName } from "react-device-detect";
