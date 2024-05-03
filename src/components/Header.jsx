@@ -1,6 +1,7 @@
 import { useState } from "react";
 import logo from "../assets/logo.svg";
 import { FaX, FaBars } from "react-icons/fa6";
+import { isMobile, osName } from "react-device-detect";
 
 export function Header() {
   const [showMenu, setShowMenu] = useState(false);
@@ -8,6 +9,7 @@ export function Header() {
   const [isDesktopScreen, setIsDesktopScreen] = useState(
     window.innerWidth > 768 ? true : false
   );
+  const [streamUrl, setStreamUrl] = useState("https://www.facebook.com/christianlifecenterchipman/live_videos")
 
   const headerClasses =
     "fixed z-10 w-full h-fit px-4 py-2 flex flex-col md:flex-row items-center transition";
@@ -47,6 +49,16 @@ export function Header() {
 
   addEventListener("scroll", changeHeaderBg);
   addEventListener("resize", changeScreen);
+
+  useEffect(() => {
+    if (isMobile) {
+      if(osName === "iOS"){
+        setStreamUrl("fb://profile/1215015818590281")
+      } else {
+        setStreamUrl("fb://page/1215015818590281")
+      }
+    }
+  })
 
   return (
     <header
@@ -113,7 +125,7 @@ export function Header() {
           <li>
             <button type="button" className="hover:brightness-200">
               <a
-                href="https://www.facebook.com/christianlifecenterchipman/live_videos"
+                href={streamUrl}
                 target="_blank"
               >
                 Watch

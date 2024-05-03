@@ -6,13 +6,16 @@ import { useEffect, useState } from "react";
 
 export function App() {
   const [streamUrl, setStreamUrl] = useState("https://www.facebook.com/christianlifecenterchipman/live_videos")
+  const [clclKidsUrl, setClcKidsUrl] = useState("https://www.facebook.com/profile.php?id=100064468585085")
   
   useEffect(() => {
     if (isMobile) {
       if(osName === "iOS"){
-        setStreamUrl("fb://profile/1215015818590281/live_videos")
+        setStreamUrl("fb://profile/1215015818590281")
+        setClcKidsUrl("fb://profile/100064468585085")
       } else {
         setStreamUrl("fb://page/1215015818590281")
+        setClcKidsUrl("fb://page/100064468585085")
       }
     }
   })
@@ -90,7 +93,7 @@ export function App() {
       <section id="kids" className="w-full h-[500px] bg-[url('./assets/kids-cover.jpg')] bg-cover bg-center bg-fixed flex items-center justify-center">
         <div className="flex flex-1 flex-col items-center justify-center gap-6 p-4 text-white bg-black/50 backdrop-blur-sm">
           <a
-            href="https://www.facebook.com/profile.php?id=100064468585085"
+            href={clclKidsUrl}
             target="_blank"
           >
             <img
