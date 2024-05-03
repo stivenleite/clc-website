@@ -9,7 +9,7 @@ export function App() {
   
   useEffect(() => {
     if (isMobile) {
-      setStreamUrl("fb://page/1215015818590281")
+      setStreamUrl("fb://profile/1215015818590281")
     }
   })
   return (
