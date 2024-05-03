@@ -1,7 +1,7 @@
 import kidsLogo from "./assets/kids-logo.svg";
 import { FaChurch, FaPhoneAlt, FaCheck } from "react-icons/fa";
 import { Header } from "./components/Header";
-import { isMobile } from "react-device-detect";
+import { isMobile, osName } from "react-device-detect";
 import { useEffect, useState } from "react";
 
 export function App() {
@@ -9,7 +9,11 @@ export function App() {
   
   useEffect(() => {
     if (isMobile) {
-      setStreamUrl("fb://profile/1215015818590281")
+      if(osName === "iOS"){
+        setStreamUrl("fb://profile/1215015818590281/live_videos")
+      } else {
+        setStreamUrl("fb://page/1215015818590281")
+      }
     }
   })
   return (
