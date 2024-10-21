@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo2.png";
 import { FaX, FaBars } from "react-icons/fa6";
 import { isMobile, osName } from "react-device-detect";
 
@@ -12,7 +12,7 @@ export function Header() {
   const [streamUrl, setStreamUrl] = useState("https://www.facebook.com/christianlifecenterchipman/live_videos")
 
   const headerClasses =
-    "fixed z-10 w-full h-fit px-4 py-2 flex flex-col md:flex-row items-center transition";
+    "fixed z-10 w-full h-fit px-6 py-2 flex flex-col md:flex-row items-center transition";
   const headerClassesBgWhite = headerClasses + " " + "bg-white shadow-xl";
 
   function toggleMenu() {
@@ -72,7 +72,7 @@ export function Header() {
           <img
             src={logo}
             alt="CLC"
-            className="size-16 drop-shadow-lg hover:brightness-150"
+            className="size-20 drop-shadow-lg hover:brightness-150"
           />
         </a>
         <button className="md:hidden" onClick={toggleMenu}>
