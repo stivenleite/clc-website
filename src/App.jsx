@@ -90,7 +90,7 @@ export function App() {
       </section>
 
       {/* CLC Kids */}
-      <section id="kids" className="w-full h-[500px] bg-[url('./assets/kids-cover.jpg')] bg-cover bg-center bg-fixed flex items-center justify-center">
+      <section id="kids" className="w-full h-[500px] bg-[url('./assets/kids-cover.jpg')] bg-cover bg-center md:bg-fixed flex items-center justify-center">
         <div className="flex flex-1 flex-col items-center justify-center gap-6 p-4 text-white bg-black/50 backdrop-blur-sm">
           <a
             href={clclKidsUrl}
@@ -110,7 +110,7 @@ export function App() {
         </div>
       </section>
 
-      
+      {/* Give */}
       <section id="give" className="flex items-center text-center flex-col gap-6 py-12 px-6">
         <div className="font-bold text-xl">We desire to be generous because He is Generous with us</div>
         <div className="flex md:flex-row flex-col gap-12 justify-center text-center">
