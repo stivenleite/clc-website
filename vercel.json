@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/shop", "destination": "https://chipman-christian-life-center.itemorder.com/shop/home/", "permanent": true },
+    { "source": "/shop/:path*", "destination": "https://chipman-christian-life-center.itemorder.com/shop/:path*", "permanent": true }
+  ]
+}
